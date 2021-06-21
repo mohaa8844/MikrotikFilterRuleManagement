@@ -1,0 +1,120 @@
+﻿@model IEnumerable<FirewallRuleManagement.Models.Filter>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 style="color: #FFC312;">Filter Rules</h1>
+
+<p>
+    <a  asp-action="Create" style="color: #FFC312;">Create New</a>
+</p>
+<table class="table" border="1">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Chain)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Action)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Comment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SrcAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DstAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Protocol)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SrcPort)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DstPort)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InInterface)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OutInterface)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SrcAddressList)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DstAddressList)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Limit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Disabled)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Chain)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Action)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Comment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SrcAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DstAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Protocol)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SrcPort)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DstPort)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InInterface)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OutInterface)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SrcAddressList)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DstAddressList)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Limit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Disabled)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

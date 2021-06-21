@@ -1,0 +1,99 @@
+﻿@model FirewallRuleManagement.Models.Filter
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>Filter</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Chain" class="control-label"></label>
+                @Html.DropDownListFor(model => model.Chain, Model.ChainItems())
+                <span asp-validation-for="Chain" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Action" class="control-label"></label>
+                @Html.DropDownListFor(model => model.Action, Model.ActionItems())
+                <span asp-validation-for="Action" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Comment" class="control-label"></label>
+                <input asp-for="Comment" class="form-control" />
+                <span asp-validation-for="Comment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SrcAddress" class="control-label"></label>
+                <input asp-for="SrcAddress" class="form-control" />
+                <span asp-validation-for="SrcAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DstAddress" class="control-label"></label>
+                <input asp-for="DstAddress" class="form-control" />
+                <span asp-validation-for="DstAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Protocol" class="control-label"></label>
+                @Html.DropDownListFor(model => model.Protocol, Model.ProtocolItems())
+                <span asp-validation-for="Protocol" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SrcPort" class="control-label"></label>
+                <input asp-for="SrcPort" class="form-control" />
+                <span asp-validation-for="SrcPort" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DstPort" class="control-label"></label>
+                <input asp-for="DstPort" class="form-control" />
+                <span asp-validation-for="DstPort" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InInterface" class="control-label"></label>
+                @Html.DropDownListFor(model => model.InInterface, Model.InterfaceItems)
+                <span asp-validation-for="InInterface" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OutInterface" class="control-label"></label>
+                @Html.DropDownListFor(model => model.OutInterface, Model.InterfaceItems)
+                <span asp-validation-for="OutInterface" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SrcAddressList" class="control-label"></label>
+                <input asp-for="SrcAddressList" class="form-control" />
+                <span asp-validation-for="SrcAddressList" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DstAddressList" class="control-label"></label>
+                <input asp-for="DstAddressList" class="form-control" />
+                <span asp-validation-for="DstAddressList" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Limit" class="control-label"></label>
+                <input asp-for="Limit" class="form-control" />
+                <span asp-validation-for="Limit" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Disabled" /> @Html.DisplayNameFor(model => model.Disabled)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
