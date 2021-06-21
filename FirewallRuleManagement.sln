@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FirewallRuleManagement", "FirewallRuleManagement.csproj", "{5BB488BE-AC31-457E-B25C-C7656F890EEE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service", "..\Service\Service.csproj", "{9D96330B-077B-45FC-86BF-412E24ACA3E6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5BB488BE-AC31-457E-B25C-C7656F890EEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BB488BE-AC31-457E-B25C-C7656F890EEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BB488BE-AC31-457E-B25C-C7656F890EEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BB488BE-AC31-457E-B25C-C7656F890EEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D96330B-077B-45FC-86BF-412E24ACA3E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D96330B-077B-45FC-86BF-412E24ACA3E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D96330B-077B-45FC-86BF-412E24ACA3E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D96330B-077B-45FC-86BF-412E24ACA3E6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F8989397-A50F-4EBD-B01A-1A01E0772D3C}
+	EndGlobalSection
+EndGlobal
